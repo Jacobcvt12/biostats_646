@@ -43,6 +43,25 @@ output: pdf_document
     \Aboxed{a & = c}
     \end{aligned}
     $$
+    Now we show that $b=d$. Suppose that $a = b$. Then
+    $$
+    \begin{aligned}
+    (a,b) &= \{\{a\}, \{a, b\}\} \\
+    &= (c, d) \\
+    &= \{\{c\}, \{c, d\}\} \\
+    &\implies \{c, d\} \in \{\{a\}\} 
+    \implies \Aboxed{d = a = b}
+    \end{aligned}
+    $$
+    Now suppose that $a \neq b$. Then
+    $$
+    \begin{aligned}
+    \cup \{\{a\}. \{a, b\}\} &= \cup \{\{c\}, \{c, d\}\} \\
+    \{a\} \cup \{a, b\} &= \{c\} \cup \{c, d\} \\
+    \{a, b\} &= \{c, d\}
+    \end{aligned}
+    $$
+    We already know that $a=c$, but since $a \neq b$ then $b \neq c \implies \boxed{b=d}$. \qedsymbol
 4. Let $A$ and $B$ be events with probabilities $\mathbb{P}(A)=\frac{3}{4}$ and $\mathbb{P}(B)=\frac{1}{3}$. Show that
     $$
     \frac{1}{12} \leq \mathbb{P}(A \cap B) \leq \frac{1}{3}

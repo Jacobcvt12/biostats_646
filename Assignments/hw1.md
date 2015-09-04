@@ -4,6 +4,7 @@ author: "Jacob Carey"
 date: \today
 header-includes:
     - \usepackage{amsthm}
+    - \usepackage{mathtools}
 output: pdf_document
 ---
 
@@ -24,7 +25,24 @@ output: pdf_document
     $$
     \{\{a\},\{a,b\}\} = \{\{c\},\{c,d\}\}
     $$
-
+    Suppose $a=c$ and $b=d$. Then
+    $$
+    \begin{aligned}
+    (a, b) &= \{\{a\}, \{a, b\}\} \\
+    &= \{\{c\}, \{c, d\}\} \\
+    &= (c, d)
+    \end{aligned}
+    $$
+    Now suppose $(a, b) = (c, d)$. Then
+    $$
+    \begin{aligned}
+    \{\{a\}, \{a, b\}\} &= \{\{c\}, \{c, d\}\} \\
+    \cap \{\{a\}, \{a, b\}\} &= \cap \{\{c\}, \{c, d\}\} \\
+    \{a\} \cap \{a, b\} &= \{c\} \cap \{c, d\} \\
+    \{a\} &= \{c\} \\
+    \Aboxed{a & = c}
+    \end{aligned}
+    $$
 4. Let $A$ and $B$ be events with probabilities $\mathbb{P}(A)=\frac{3}{4}$ and $\mathbb{P}(B)=\frac{1}{3}$. Show that
     $$
     \frac{1}{12} \leq \mathbb{P}(A \cap B) \leq \frac{1}{3}

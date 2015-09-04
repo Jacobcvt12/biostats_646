@@ -2,10 +2,13 @@
 title: "Homework 1"
 author: "Jacob Carey"
 date: \today
+header-includes:
+    - \usepackage{amsthm}
 output: pdf_document
 ---
 
-1. Prove that $A \cap B = B \cap A$
+1. Prove that $A \cap B = B \cap A$  
+    Let $c \in A \cap B$. Then $c \in A$ and $c \in B$. Thus $c \in B \cap A$. The reverse follows similarly. \qedsymbol
  
 2. Prove that $A \cup (B \cup C)=(A \cup B) \cup C$
 

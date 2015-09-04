@@ -20,7 +20,10 @@ output: pdf_document
     $$
     Thus $A \cup (B \cup C)=(A \cup B) \cup C$. \qedsymbol 
 
-3. Equality of ordered pairs is defined as $(a,b)=(c,d)$ if and only if $a=c$ and $b=d$. Show that this is equivalent to the  definition  by sets i.e. $\{\{a\},\{a,b\}\} = \{\{c\},\{c,d\}\}$
+3. Equality of ordered pairs is defined as $(a,b)=(c,d)$ if and only if $a=c$ and $b=d$. Show that this is equivalent to the  definition  by sets i.e. 
+    $$
+    \{\{a\},\{a,b\}\} = \{\{c\},\{c,d\}\}
+    $$
 
 4. Let $A$ and $B$ be events with probabilities $\mathbb{P}(A)=\frac{3}{4}$ and $\mathbb{P}(B)=\frac{1}{3}$. Show that
     $$

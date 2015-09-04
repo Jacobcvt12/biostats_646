@@ -1,0 +1,31 @@
+---
+title: "Homework 1"
+author: "Jacob Carey"
+date: \today
+output: pdf_document
+---
+
+1. Prove that $A \cap B = B \cap A$
+ 
+2. Prove that $A \cup (B \cup C)=(A \cup B) \cup C$
+
+3. Equality of ordered pairs is defined as $(a,b)=(c,d)$ if and only if $a=c$ and $b=d$. Show that this is equivalent to the  definition  by sets i.e. $\{\{a\},\{a,b\}\} = \{\{c\},\{c,d\}\}$
+
+4. Let $A$ and $B$ be events with probabilities $\mathbb{P}(A)=\frac{3}{4}$ and $\mathbb{P}(B)=\frac{1}{3}$. Show that
+    $$
+    \frac{1}{12} \leq \mathbb{P}(A \cap B) \leq \frac{1}{3}
+    $$
+    
+    Show that these bounds hold (are sharp) when
+    $$
+    \Omega=\{1,2,\ldots,12\}\mbox{ with }\mathbb{P}(\{i\})=\frac{1}{12}\;\;,\;\;i=1,2,\ldots,12
+    $$
+    
+    and $A=\{1,2,\ldots,9\}$, $B=\{9,10,11,12\}$ for the lower bound and $A=\{1,2,\ldots,9\}$, $B=\{1,2,3,4\}$ for the upper bound.
+    
+    Repeat, finding upper and lower bounds for  $A \cup B$, the same $A$ and $B$ work for the sharp statement.
+
+5. You flip three coins. At least two are alike. Since it is an even chance that the remaining coin is a head or tail the probability that all three are alike is $\frac{1}{2}$. Is this reasoning correct?
+
+6. Show that the probability of exactly one of the events $A$ and $B$ occurs is $\mathbb{P}(A)+\mathbb{P}(B)-2\mathbb{P}(A \cap B)$.
+

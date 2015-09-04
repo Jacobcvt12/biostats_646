@@ -88,5 +88,14 @@ output: pdf_document
     and so the reasoning is correct. \qedsymbol
 
 
-6. Show that the probability of exactly one of the events $A$ and $B$ occurs is $\mathbb{P}(A)+\mathbb{P}(B)-2\mathbb{P}(A \cap B)$.
+6. Show that the probability of exactly one of the events $A$ and $B$ occurs is $\mathbb{P}(A)+\mathbb{P}(B)-2\mathbb{P}(A \cap B)$.  
+    If only event $A$ occurs this equivalent to $A \cap B^c$. Similarly, only event $B$ occurring can be written as $B \cap A^c$. These two events are mutually exclusive. Then 
+    $$
+    \begin{aligned}
+    \mathbb{P}((A \cap B^c) \cup (A^c \cap B)) = \mathbb{P}(A \cap B^c) + \mathbb{P}(A^c \cap B) = \\
+    \mathbb{P}(A) - \mathbb{P}(A \cap B) + \mathbb{P}(B) - \mathbb{P}(B \cap A) = \\
+    \boxed{\mathbb{P}(A) + \mathbb{P}(B) - 2 \mathbb{P}(A \cap B)}  \\ 
+    \qedsymbol
+    \end{aligned}
+    $$
 

@@ -10,7 +10,15 @@ output: pdf_document
 1. Prove that $A \cap B = B \cap A$  
     Let $c \in A \cap B$. Then $c \in A$ and $c \in B$. Thus $c \in B \cap A$. The reverse follows similarly. \qedsymbol
  
-2. Prove that $A \cup (B \cup C)=(A \cup B) \cup C$
+2. Prove that $A \cup (B \cup C)=(A \cup B) \cup C$  
+    Let $d \in A \cup (B \cup C)$. Then
+    $$
+    \begin{aligned}
+    d \in A \cup (B \cup C) &\iff d \in A \lor d \in B \cup C \\
+    &\iff d \in (A \cup B) \lor d \in C \\
+    \end{aligned}
+    $$
+    Thus $A \cup (B \cup C)=(A \cup B) \cup C$. \qedsymbol 
 
 3. Equality of ordered pairs is defined as $(a,b)=(c,d)$ if and only if $a=c$ and $b=d$. Show that this is equivalent to the  definition  by sets i.e. $\{\{a\},\{a,b\}\} = \{\{c\},\{c,d\}\}$
 

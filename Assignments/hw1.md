@@ -84,6 +84,10 @@ output: pdf_document
     \end{aligned}
     $$
 
+    For $A=\{1,2,\ldots,9\}$ and $B=\{9,10,11,12\}$ then $A \cap B = \{9\}$ and $P(A \cap B)=\frac{1}{12}$. Similarly for $A=\{1,2,\ldots,9\}$ and $B=\{1,2,3,4\}$, $A \cap B = \{1,2,3,4\} \implies P(A \cap B)=\frac{1}{3}$. Thus the bounds are sharp.
+
+    For $A=\{1,2,\ldots,9\}$ and $B=\{9,10,11,12\}$ then $A \cup B = \{1,2,\ldots,12\}$ and $P(A \cup B)=1$. Similarly for $A=\{1,2,\ldots,9\}$ and $B=\{1,2,3,4\}$, $A \cup B = \{1,2,\ldots,9\} \implies P(A \cup B)=\frac{3}{4}$. Here we have that $\frac{3}{4} \leq P(A \cup B) \leq 1$.
+
     \qedsymbol
 
 5. You flip three coins. At least two are alike. Since it is an even chance that the remaining coin is a head or tail the probability that all three are alike is $\frac{1}{2}$. Is this reasoning correct?  

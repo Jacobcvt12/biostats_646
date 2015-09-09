@@ -74,7 +74,17 @@ output: pdf_document
     
     and $A=\{1,2,\ldots,9\}$, $B=\{9,10,11,12\}$ for the lower bound and $A=\{1,2,\ldots,9\}$, $B=\{1,2,3,4\}$ for the upper bound.
     
-    Repeat, finding upper and lower bounds for  $A \cup B$, the same $A$ and $B$ work for the sharp statement.
+    Repeat, finding upper and lower bounds for  $A \cup B$, the same $A$ and $B$ work for the sharp statement.  
+
+    From class, we know that $P(A \cup B) = P(A) + P(B) - P(A \cap B)$. Rearranging, we have that $P(A \cap B) = P(A) + P(B) - P(A \cup B)=\frac{3}{4}+\frac{1}{3}-P(A \cup B)=\frac{13}{12} - P(A \cup B)$. Note that $P(A \cup B) \leq 1$. Additionally, $P(A \cup B) \geq \max(P(A), P(B)) = \frac{3}{4}$. It follows that 
+    $$
+    \begin{aligned}
+        P(A \cap B) &\geq \frac{13}{12} - 1 = \Aboxed{\frac{1}{12}} \\
+        P(A \cap B) &\leq \frac{13}{12} - \frac{3}{4} = \Aboxed{\frac{1}{3}}
+    \end{aligned}
+    $$
+
+    \qedsymbol
 
 5. You flip three coins. At least two are alike. Since it is an even chance that the remaining coin is a head or tail the probability that all three are alike is $\frac{1}{2}$. Is this reasoning correct?  
     Consider $A$ to be the number of total alike coins of the three coins flipped. Then we are interested in 

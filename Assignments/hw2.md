@@ -44,9 +44,12 @@ $$
 $$
     Rearring $P(E \cup F) = P(E) + P(F) - P(E \cap F)$ we have that $P(E \cap F) = P(E) + P(F) - P(E \cup F) \geq \boxed{P(E) + P(F) - 1}$.
 3. In how many ways can 3 novels, 2 mathematics books, and 1 chemistry book be arranged on a bookshelf if
-    (a) the books can be arranged in any order.
-    (b) the mathematics books must be together and the novels must be together.
-    (c) the novels must be together but the other books can be arranged in any order.
+    (a) the books can be arranged in any order.  
+        Since there are $3+2+1=6$ books in total, there are $6!$ ways to arrange the books.
+    (b) the mathematics books must be together and the novels must be together.  
+        With 3 different subjects, there are $3!$ ways to organize the subjects. Within novels, there are $3!$ ways to organize the novels, and within mathematics, there are $2!$ ways to order them. Thus the books can be ordered in $3!3!2!$ ways under this specification.
+    (c) the novels must be together but the other books can be arranged in any order.  
+        Considering the novels as one unit, there $(1+2+1)!=4!$ ways to order the "units." Within the novels, there are $3!$ ways of ordering. So in total there are $4!3!$ different orderings.
 4. Show that
 $$
 {n \choose r-1} + {n \choose r} = {n+1 \choose r}\;\;\mbox{for integers $n$ and $r$}

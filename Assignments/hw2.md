@@ -69,4 +69,9 @@ $$
 5. You can't remember which of $n$ keys fits your file drawer. You try each without replacement so that you will get the right key on the first, second,...,$n$ try. Show that each of these outcomes has the same probability, namely $1/n$.
 6. If $n$ balls are placed at random into $n$ cells find the probability that exactly one  cell remains empty.
 7. Show that it is more probable to get at least one ace (one) with four dice that it is to get at least one double ace in 24 thows of two dice.
-8. A box contains ninety good screws and ten defective screws. If ten screws are used what is the probability that none is defective?
+8. A box contains ninety good screws and ten defective screws. If ten screws are used what is the probability that none is defective?  
+    This probability follows a hypergeomtric distribution and can set up as follows:
+    $$
+    \frac{{10 \choose 0}{100-10 \choose 10-0}}{{100 \choose 10}}
+    $$
+    From R, this is calculated as $0.3304762$.

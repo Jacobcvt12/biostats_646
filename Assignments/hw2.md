@@ -50,6 +50,18 @@ $$
 $$
 {n \choose r-1} + {n \choose r} = {n+1 \choose r}\;\;\mbox{for integers $n$ and $r$}
 $$
+    $$
+    \begin{aligned}
+    {n \choose r-1} + {n \choose r} &= \frac{n!}{(n-r+1)!(r-1)!} + \frac{n!}{(n-r)!r!} \\
+    &= \frac{n!}{(n+1-r)!(r-1)!} + \frac{n!}{(n-r)!r!} \\
+    &= \frac{n!}{(n+1-r)(n-r)!(r-1)!} + \frac{n!}{r(n-r)!(r-1)!} \\
+    &= \frac{n!r + n!(n+1-r)}{r(n+1-r)(n-r)!(r-1)!} \\
+    &= \frac{n!r + n!(n+1) -n!r)}{(n+1-r)!r!} \\
+    &= \frac{(n+1)!}{(n+1-r)!r!} \\
+    &= \boxed{{n+1 \choose r}} \\
+    \qedsymbol
+    \end{aligned}
+    $$
 5. You can't remember which of $n$ keys fits your file drawer. You try each without replacement so that you will get the right key on the first, second,...,$n$ try. Show that each of these outcomes has the same probability, namely $1/n$.
 6. If $n$ balls are placed at random into $n$ cells find the probability that exactly one  cell remains empty.
 7. Show that it is more probable to get at least one ace (one) with four dice that it is to get at least one double ace in 24 thows of two dice.

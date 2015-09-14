@@ -67,7 +67,15 @@ $$
     \end{aligned}
     $$
 5. You can't remember which of $n$ keys fits your file drawer. You try each without replacement so that you will get the right key on the first, second,...,$n$ try. Show that each of these outcomes has the same probability, namely $1/n$.
-6. If $n$ balls are placed at random into $n$ cells find the probability that exactly one  cell remains empty.
+6. If $n$ balls are placed at random into $n$ cells find the probability that exactly one  cell remains empty.  
+    There are $n^n$ ways of sampling the cells, the denominator of this probability. Since only one cell can have zero balls, there are ${n \choose 1}$ possible choices for the cell. Since only one cell is missing a ball, there is one and only one cell with, there are $n-1$ possible cells to choose from, giving ${n-1 \choose 1}$ possibilities of choosing this cell. In this cell, there are ${n \choose 2}$ ways to distribute the 2 balls. There are $n-2$ cells remaining and so $(n-2)!$ ways to distribute the balls amongst these cells. Thus, the number of possibilities to place these balls under this criterion is
+    $$
+    {n \choose 1}{n-1 \choose 1}{n \choose 2}(n-2)! =
+    \frac{n!}{(n-1)!}\frac{(n-1)!}{(n-2)!}\frac{n!}{(n-2)!2}(n-2)! =
+    {n \choose 2}n!
+    $$
+    Then the probability is $\boxed{{n \choose 2}\frac{n!}{n^n}}$.  
+    $\qedsymbol$
 7. Show that it is more probable to get at least one ace (one) with four dice that it is to get at least one double ace in 24 thows of two dice.
 8. A box contains ninety good screws and ten defective screws. If ten screws are used what is the probability that none is defective?  
     This probability follows a hypergeomtric distribution and can set up as follows:

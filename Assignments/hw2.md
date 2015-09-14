@@ -42,6 +42,7 @@ is also a probability on $\mathcal{W}$
 $$
 \mathbb{P}(E \cap F) \geq \mathbb{P}(E)+\mathbb{P}(B) -1
 $$
+    Rearring $P(E \cup F) = P(E) + P(F) - P(E \cap F)$ we have that $P(E \cap F) = P(E) + P(F) - P(E \cup F) \geq \boxed{P(E) + P(F) - 1}$.
 3. In how many ways can 3 novels, 2 mathematics books, and 1 chemistry book be arranged on a bookshelf if
     (a) the books can be arranged in any order.
     (b) the mathematics books must be together and the novels must be together.

@@ -67,6 +67,12 @@ $$
     \end{aligned}
     $$
 5. You can't remember which of $n$ keys fits your file drawer. You try each without replacement so that you will get the right key on the first, second,...,$n$ try. Show that each of these outcomes has the same probability, namely $1/n$.
+    The probability that a given key works is $\frac{1}{n}$. The probability that a key doesn't work is then $\frac{n-1}{n}$. Then after drawing $k$ keys, the probability that the $k+1\text{-th}$ key works is $\frac{1}{n-k}$ and doesn't work is $\frac{n-k-1}{n-k}$. Then the probability that the probability of getting the key right on the $k+1\text{-th}$ is the probability the $k+1\text{-th}$ key works and the previous $k$ keys fail:
+    $$
+    \frac{1}{n-k}\cdot \frac{n-k}{n-k-1} \cdot \frac{n-k-1}{n-k-2} 
+    \dotsm \frac{n-1}{n} = \boxed{\frac{1}{n}} \\
+    \qedsymbol
+    $$
 6. If $n$ balls are placed at random into $n$ cells find the probability that exactly one  cell remains empty.  
     There are $n^n$ ways of sampling the cells, the denominator of this probability. Since only one cell can have zero balls, there are ${n \choose 1}$ possible choices for the cell. Since only one cell is missing a ball, there is one and only one cell with, there are $n-1$ possible cells to choose from, giving ${n-1 \choose 1}$ possibilities of choosing this cell. In this cell, there are ${n \choose 2}$ ways to distribute the 2 balls. There are $n-2$ cells remaining and so $(n-2)!$ ways to distribute the balls amongst these cells. Thus, the number of possibilities to place these balls under this criterion is
     $$
@@ -76,7 +82,9 @@ $$
     $$
     Then the probability is $\boxed{{n \choose 2}\frac{n!}{n^n}}$.  
     $\qedsymbol$
-7. Show that it is more probable to get at least one ace (one) with four dice that it is to get at least one double ace in 24 thows of two dice.
+7. Show that it is more probable to get at least one ace (one) with four dice that it is to get at least one double ace in 24 thows of two dice.  
+    The probability of one ace is $\frac{1}{6}$ and of a double ace is $\frac{1}{6}\times \frac{1}{6}=\frac{1}{36}$. The probability of at least one ace with four dice is $1-P(\text{no aces})=1-(1-\frac{1}{6})^4=1-\frac{5}{6}^4 \approx 0.518$. The probability of at least one double ace in 24 tosses is $1-P(\text{no aces})=1-(1-\frac{1}{36})^24=1-\frac{35}{36}^24 \approx 0.491$.  
+    $\qedsymbol$
 8. A box contains ninety good screws and ten defective screws. If ten screws are used what is the probability that none is defective?  
     This probability follows a hypergeomtric distribution and can set up as follows:
     $$

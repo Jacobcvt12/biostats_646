@@ -83,7 +83,7 @@ $$
     Then the probability is $\boxed{{n \choose 2}\frac{n!}{n^n}}$.  
     $\qedsymbol$
 7. Show that it is more probable to get at least one ace (one) with four dice that it is to get at least one double ace in 24 thows of two dice.  
-    The probability of one ace is $\frac{1}{6}$ and of a double ace is $\frac{1}{6}\times \frac{1}{6}=\frac{1}{36}$. The probability of at least one ace with four dice is $1-P(\text{no aces})=1-(1-\frac{1}{6})^4=1-\frac{5}{6}^4 \approx 0.518$. The probability of at least one double ace in 24 tosses is $1-P(\text{no aces})=1-(1-\frac{1}{36})^24=1-\frac{35}{36}^24 \approx 0.491$.  
+    The probability of one ace is $\frac{1}{6}$ and of a double ace is $\frac{1}{6}\times \frac{1}{6}=\frac{1}{36}$. The probability of at least one ace with four dice is $1-P(\text{no aces})=1-(1-\frac{1}{6})^4=1-\frac{5}{6}^4 \approx 0.518$. The probability of at least one double ace in 24 tosses is $1-P(\text{no aces})=1-(1-\frac{1}{36})^{24}=1-\frac{35}{36}^{24} \approx 0.491$.  
     $\qedsymbol$
 8. A box contains ninety good screws and ten defective screws. If ten screws are used what is the probability that none is defective?  
     This probability follows a hypergeomtric distribution and can set up as follows:

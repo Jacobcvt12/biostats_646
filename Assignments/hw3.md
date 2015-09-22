@@ -17,9 +17,13 @@ output: pdf_document
 
         **The probability of winning is $\frac{10}{10+10}=\frac{1}{2}$, so the expected value is $\frac{1}{2} \times 10=5$ dollars. Thus, I am willing to bet $5.**
 
-    (b) A friend of yours has available many black and white balls , and he puts black and white balls into the urn to suit himself. You choose "black" or "white". A ball is drawn randomly from this urn. Write down the maximum amount you are willing to pay to play this game again assuming you will get \$10 if you guess right. The game will be played just once.
+    (b) A friend of yours has available many black and white balls , and he puts black and white balls into the urn to suit himself. You choose "black" or "white". A ball is drawn randomly from this urn. Write down the maximum amount you are willing to pay to play this game again assuming you will get \$10 if you guess right. The game will be played just once.  
 
-    (c) Do your answers differ, if so why? If not why?
+        **If you randomly choose "black" or "white", instead of making the choice yourself, you will still be guaranteed a probability $\frac{1}{2}$ of winning. Thus, using this strategy, the expected value is still $5, so I would be willing to bet $5.**
+
+    (c) Do your answers differ, if so why? If not why?  
+
+        **While the methods differ (the first game does not require randomness on the decision), the probability of winning is the same, so my answers are the same.**
 
 3. Let a sequence of events be defined as
     $$

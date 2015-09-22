@@ -31,7 +31,7 @@ output: pdf_document
     A & \mbox{$n$ is odd} \\
     B & \mbox{$n$ is even}\end{array}\right.
     $$
-    (a) Find $\liminf E_n$
+    (a) Find $\liminf E_n$  
         **If $x \in \liminf E_n$ then $x \in \cap_{n \geq N E_n} \implies \liminf E_n = A \cap B$.**
     (b) Find $\limsup E_n$  
         **If $x \in \limsup E_n$ then $x \in \cup_{n \geq N E_n} \implies \limsup E_n = A \cup B$.**

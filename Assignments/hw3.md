@@ -10,7 +10,7 @@ output: pdf_document
 
 1. A set of 8 cards contains one joker. $A$ and $B$ are two players and $A$ chooses 5 cards at random, $B$ takes the remaining three cards. What is the probability that $A$ has the joker?  If $A$ discards four cards and $B$ discards two cards and it is known that the joker has not been discarded what is the probability that $A$ has the joker?  
 
-    **The probability that A has the joker can be written as $P(X=1)$ where the probability follows a hypergeometric distribution, where there is 1 joker, 7 non-jokers, and 5 draws. From R, we have that the probability is 0.625.**
+    **The probability that A has the joker can be written as $P(X=1)$ where the probability follows a hypergeometric distribution, where there is 1 joker, 7 non-jokers, and 5 draws. From R, we have that the probability is 0.625. Given this probability, if A and B discard all cards but one and the joker is still in hand, the probability that A has the joker is still 0.625.**
 
 2. 
     (a) An urn contains  10 black balls and 10 white balls, identical except for color. You choose "black" or "white". One ball is drawn at random, and if its color matches your choice, you get \$10, otherwise nothing. Write down the maximum amount you are willy to pay to play the game. The game will be played just once.  

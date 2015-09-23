@@ -68,7 +68,17 @@ output: pdf_document
     $$
     \frac{52 \times 12!}{(52)_{13}}\;\;\mbox{or}\;\;\frac{4\times 13! \times 39!}{52!}
     $$
-    depending on whether you consider samples as ordered or not.
+    depending on whether you consider samples as ordered or not.  
+
+    **If the samples are unordered there are ${52 \choose 13}=\frac{52!}{13!39!}$ possible ways to choose 13 cards. However, there are only $4$ ways to get a bridge hand in unordered samples, so the probability is**
+    $$
+    \frac{4}{\frac{52!}{13!39!}}=\boxed{\frac{4\times13!\times39!}{52!}}
+    $$
+
+    **If you consider the samples to be ordered, the number of ways to draw 13 cards of the same suit is $52 \times 12!$. The number of ways to draw 13 ordered cards from the deck is $(52)_{13}$, and so the probability is**
+    $$
+    \boxed{\frac{52 \times 12!}{(52)_{13}}}
+    $$
 
 6. What $c$ makes the following  probability density functions
     (a) $cx^3\;\;0 \leq x \leq 1$

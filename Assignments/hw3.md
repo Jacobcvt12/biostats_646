@@ -111,7 +111,7 @@ output: pdf_document
 
     **Trivially, we see that 4 of the 6 sides of die $A$ are greater than all sides of die $B$. Similarly, 4 of 6 sides of die $C$ are less than all sides of die $B$. Thus $P(A > B) = P(B > C) = \frac{2}{3}$. In comparing dice $C$ and $D$ two sides of $C$ are greater than all sides of $D$. The probability of drawing one of these sides is $1/3$ and the probability of drawing the other sides is $2/3$. If you draw one of the lesser sides, you will win with probability $1/2$, and so probability of $P(C>D)=1/3+1/2 \times 2/3=2/3$. Comparing D to A, with probability $1/2$ you draw an always winning side. With the other sides, you will win with probability $1/3$ and so $P(D>A)=1/2 + 1/2 \times 1/3=2/3$.**
 
-    **To make the game fair, just change the dice to to normal $1, ..., 6$ dice.** 
+    **To make the game fair, randomly allocate the dice to the players**
 
 8. Find the distribution function for the Cauchy density function i.e.
     $$

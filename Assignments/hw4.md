@@ -82,3 +82,61 @@ output: pdf_document
         f_X(x) &= \frac{d}{dx} F_X(x) = \frac{1}{(\sigma\pi)(1+(\frac{x-\mu}{\sigma})^2}
         \end{aligned}
         $$
+
+5. 
+    (a)
+        $$
+        \begin{aligned}
+        P(S=s) &= \sum_{k=1}^S P(X=k)P(Y=s-k) \\
+        &= \sum (1-p)^{k-1}p(1-p)^{s-k-1}p \\
+        &= \sum p^2 (1-p)^{s-2} \\
+        &= \boxed{(s-1)p^2(1-p)^{s-2}}
+        \end{aligned}
+        $$
+
+6. 
+    (a) **This problem is simply the sum of two hypergeometric distributions - one where a success is two white balls and one where a success is two black balls**  
+        **White balls**
+        $$
+        \begin{aligned}
+        \frac{{n \choose 2}{m \choose 0}}{{m+n \choose 2}} &=
+        \frac{\frac{n!}{2!(n-2)!}}{\frac{(m+n)!}{2!(m+n-2)!}} \\
+        &= \frac{n!(m+n-2)!}{(n-2)!(m+n)!} \\
+        &= \frac{n(n-1)}{(m+n)(m+n-1)}
+        \end{aligned}
+        $$
+        **Black balls**
+        $$
+        \begin{aligned}
+        \frac{{m \choose 2}{n \choose 0}}{{m+n \choose 2}} &=
+        \frac{\frac{m!}{2!(m-2)!}}{\frac{(m+n)!}{2!(m+n-2)!}} \\
+        &= \frac{n!(m+n-2)!}{(n-2)!(m+n)!} \\
+        &= \frac{m(m-1)}{(m+n)(m+n-1)}
+        \end{aligned}
+        $$
+        **Total probability**
+        $$
+        \frac{n(n-1) + m(m-1)}{(m+n)(m+n-1)}
+        $$
+    (b) This is similar to (a) but is the sum of two binomial distributions, since the draws are with replacement.  
+        $$
+        p_{\text{total}} = p_{\text{white}} + p_{\text{black}} = (\frac{n}{n+m})^2 + (\frac{m}{n+m})^2 = \frac{n^2 + m^2}{(n+m)^2} 
+        $$
+    (c) 
+        $$
+        \frac{n(n-1) + m(m-1)}{(m+n)(m+n-1)} < 
+        \frac{n(n-1) + m(m-1)}{(n+m)^2} <
+        \frac{n^2 + m^2}{(n+m)^2}
+        $$
+7. 
+    $$
+    \begin{aligned}
+    P(X > n+k | X > n) &= \frac{P(X>n+k, X>n)}{P(X>n)} \\
+    &= \frac{P(X>n+k)}{P(X > n)} \\
+    &= \frac{(1-(1-(1-p)^{n+k})}{(1-(1-(1-p)^{n})} \\
+    &= \frac{(1-p)^{n+k}}{(1-p)^n} \\
+    &= (1-p)^k \\
+    &= 1-(1-(1-p)^k) \\
+    &= \boxed{P(X>k)}
+    \end{aligned}
+    $$

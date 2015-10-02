@@ -93,6 +93,8 @@ output: pdf_document
         &= \boxed{(s-1)p^2(1-p)^{s-2}}
         \end{aligned}
         $$
+    (b) **The sum of two geometric distributions is just the probability of a number of successes before two failures**
+    (c) **This generalizes to the number of successes before $n$ failures, which is the negative binomial distribution This generalizes to the number of successes before $n$ failures, which is the negative binomial distribution**
 
 6. 
     (a) **This problem is simply the sum of two hypergeometric distributions - one where a success is two white balls and one where a success is two black balls**  

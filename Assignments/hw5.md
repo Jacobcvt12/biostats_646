@@ -41,9 +41,31 @@ output: pdf_document
         \end{aligned}
         $$
 
-3.
+    (b)
 
+3.
+    (a) $f_X = \int_0^{1-x} 2 dy = 2(1-x)$ **Not uniform**
+    (b) $f_{Y|X} = \frac{2}{2(1-x)}=\frac{1}{1-x}$
+    (c) $f_Y = \int_0^{1-y} 2 dx = 2(1-y)$ **Not independent**
 4.
+    $$
+    \begin{aligned}
+    P(X_1=x_1, ..., X_k=x_k|S=X_1+...+X_k=s)  &=
+    \frac{P(X_1=x_1, ..., X_k=x_k,s=X_1+...+X_k)}{P(S=\sum X_i=s)} \\
+    &= \frac{P(X_1=x_1) \dotsm P(X_k=s-\sum_{i=1}^{k-1}x_i)}{P(S=s)} \\
+    &= \frac{\lambda_1^{x_1} e^{-\lambda_1}}{x_1!} \dotsm
+    \frac{\lambda_k^{s-\sum x_i} e^{-\lambda_k}}{(s-\sum x_i)!}
+    \frac{s!}{(\lambda_1 + ... + \lambda_k)^s e^{-(\lambda_1+...+\lambda_k)}} \\
+    &= \frac{\lambda_1^{x_1} \dotsm \lambda_k^{x_k} s!}{x_1! \dotsm x_k!
+    (\lambda_1+...+\lambda_k)^s} \\
+    &= \frac{\lambda_1^{x_1} \dotsm \lambda_k^{x_k} s!}{x_1! \dotsm x_k!
+    (\lambda_1+...+\lambda_k)^{x_1+...x_k}} \\
+    &= \frac{s!}{x_1! \dotsm x_k!}\frac{\lambda_1}{\sum \lambda_i}^{x_1}
+    \dotsm \frac{\lambda_k}{\sum \lambda_i}^{x_k} \\
+    &= \boxed{\text{Mult}(n, \mathbf{\pi})} \\
+    \text{where } \pi_i = \frac{\lambda_i}{\sum \lambda_j}^{x_i}
+    \end{aligned}
+    $$
 
 5.
 

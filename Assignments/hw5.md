@@ -47,9 +47,12 @@ output: pdf_document
         \begin{vmatrix}
         1 & 1 \\
         1 & -1 \\
-        \end{vmatrix} = 2 \\
-        f_{U,V} (u, v) = f_X(x=(u+v)/2)f_Y(y=(u−v)/2)
+        \end{vmatrix} = 2 
         $$
+        $$
+        f_{U,V} (u, v) = f_X(x=(u+v)/2)f_Y(u-v)/2)|J|
+        $$
+        Thus, U and V are independent.
 
 3.
     (a) $f_X = \int_0^{1-x} 2 dy = 2(1-x)$ **Not uniform**

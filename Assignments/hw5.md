@@ -41,7 +41,15 @@ output: pdf_document
         \end{aligned}
         $$
 
-    (b)
+    (b) Set $U=X+Y$ and $V=X-Y$. Then $X=\frac{U+V}{2}$ and $Y=\frac{U-V}{2}$. Then it follows that
+        $$
+        |J_{x,y}|=
+        \begin{vmatrix}
+        1 & 1 \\
+        1 & -1 \\
+        \end{vmatrix} = 2 \\
+        f_{U,V} (u, v) = f_X(x=(u+v)/2)f_Y(y=(u−v)/2)
+        $$
 
 3.
     (a) $f_X = \int_0^{1-x} 2 dy = 2(1-x)$ **Not uniform**
@@ -68,4 +76,37 @@ output: pdf_document
     $$
 
 5.
+    (a) **Let 
+        $Y_1 = \left[\begin{matrix}x_{1}\\x_{2}\end{matrix}\right]$, and $Y_2 = x_3$. Then $E Y_1 = \mu \text{ and } E Y_2 = \left[\begin{matrix}\mu\\\mu\end{matrix}\right]$
+        Additionally,
+        $$
+        \Sigma_{11} = \left[\begin{matrix}3 & 0\\0 & 1\end{matrix}\right]
+        \Sigma_{12} = \left[\begin{matrix}1\\1\end{matrix}\right]
+        \Sigma_{21} = \left[\begin{matrix}1 & 1\end{matrix}\right]
+        \Sigma_{22} = \left[\begin{matrix}2\end{matrix}\right]
+        $$
+        Then $\mu_2^{*} = E Y_1 | Y_2 = \mu + \left[\begin{matrix}- \frac{4 \mu}{3} + \frac{x_{1}}{3} + x_{2}\end{matrix}\right]$ and 
+        $\Sigma_{22}^{*} = Cov Y_1 | Y_2 = \left[\begin{matrix}\frac{2}{3}\end{matrix}\right]$
+        So the conditional distribution is 
+        $$
+        \boxed{\text{MVN}(\mu_2^{*}, \Sigma_{22}^*)}
+        $$
+        **
+    (b) Let
+        $Y_1 = x_1$ and $Y_2 = \left[\begin{matrix}x_{2}\\x_{3}\end{matrix}\right]$ Then $E Y_1 = \mu \text{ and } E Y_2 = \left[\begin{matrix}\mu\\\mu\end{matrix}\right]$
+        Additionally,
+        $$
+        \Sigma_{11} = \left[\begin{matrix}3\end{matrix}\right]
+        \Sigma_{12} = \left[\begin{matrix}0\\1\end{matrix}\right]
+        \Sigma_{21} = \left[\begin{matrix}0 & 1\end{matrix}\right]
+        \Sigma_{22} = \left[\begin{matrix}1 & 1\\1 & 2\end{matrix}\right]
+        $$
+
+        Then $\mu_2^* = \left[\begin{matrix}\mu\\\frac{2 \mu}{3} + \frac{x_{1}}{3}\end{matrix}\right]$ and
+        $\Sigma_22^*=\left[\begin{matrix}1 & 1\\1 & \frac{5}{3}\end{matrix}\right]$
+
+        So the conditional distribution is 
+        $$
+        \boxed{\text{MVN}(\mu_2^{*}, \Sigma_{22}^*)}
+        $$
 

@@ -9,6 +9,10 @@ header-includes:
 output: pdf_document
 ---
 
+```{r, echo=FALSE}
+knitr::opts_chunk$set(message=FALSE)
+```
+
 1. 
     (a) The number of possible combinations is
         $$

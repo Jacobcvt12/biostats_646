@@ -90,3 +90,33 @@ output: pdf_document
         \frac{d}{dt} H(t) = -\frac{d}{dt} \log(1-F(t)) =
         \boxed{\frac{f(t)}{1-F(t)}}
         $$
+
+    (b)
+
+    (c)
+
+6. 
+    (a)
+    ```{r}
+    library(ggplot2)
+    library(dplyr)
+
+    dlaplace <- function(x, lambda=1) lambda / 2 * exp(-lambda * abs(x))
+
+    x <- seq(-10, 10, by=0.1)
+
+    data <- bind_rows(data_frame(x=x, 
+                                 density=dlaplace(x, lambda=1),
+                                 lambda=1),
+                      data_frame(x=x, 
+                                 density=dlaplace(x, lambda=4),
+                                 lambda=4),
+                      data_frame(x=x, 
+                                 density=dlaplace(x, lambda=6),
+                                 lambda=6)) %>%
+        mutate(lambda=as.character(lambda))
+
+    ggplot(data, aes(x=x, y=density)) +
+        geom_line(aes(colour=lambda, linetype=lambda)) +
+        theme_classic()
+    ```

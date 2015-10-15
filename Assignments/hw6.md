@@ -40,3 +40,10 @@ output: pdf_document
     &= \boxed{\int_0^{\infty} 2x [1-F_X(x)] dx}
     \end{aligned}
     $$
+
+3.
+    $$ 
+    P_X(z) = \sum_{x=0}^{n-1} z^x f_X(x) = \sum_0^{n-1}z^x\frac{1}{n}
+    =\frac{1}{n}\sum_0^{n-1}z^x = \boxed{\frac{1}{n}\times
+    \frac{z^n-1}{z-1}}
+    $$

@@ -5,6 +5,7 @@ date: \today
 header-includes:
     - \usepackage{amsthm}
     - \usepackage{mathtools}
+    - \usepackage{dsfont}
 output: pdf_document
 ---
 
@@ -47,3 +48,45 @@ output: pdf_document
     =\frac{1}{n}\sum_0^{n-1}z^x = \boxed{\frac{1}{n}\times
     \frac{z^n-1}{z-1}}
     $$
+
+4. We show that $\mathds{1}_{A \cup B}=\mathds{1}_A + \mathds{1}_B - \mathds{1}_A\mathds{1}_B$.  
+
+    Let $\omega \in A \cup B$. Then  
+        (1) $\mathds{1}_{A\cup B} = 1$  
+        (2) $\omega \in A, \omega \in B$, or $\omega \notin A, \omega \in B$, $\omega \in A, \omega \notin B$. Note that the second and third possibilities are equivalent  
+        (3) a. $\omega \in A, \omega \in B \implies \mathds{1}_A = 1,  \mathds{1}_B=1, \mathds{1}_A\mathds{1}_B= 1$  
+            b. $\omega \notin A, \omega \in B \implies \mathds{1}_A = 0,  \mathds{1}_B=1, \mathds{1}_A\mathds{1}_B= 0$  
+        (4) $\mathds{1}_A +  \mathds{1}_B -  \mathds{1}_A\mathds{1}_B=1$  
+
+    Let $\omega \notin A \cup B$. Then  
+        (1) $\mathds{1}_{A\cup B} = 0$  
+        (2) $\omega \notin A, \omega \notin B \implies \mathds{1}_A = 0,  \mathds{1}_B=0$  
+        (3) $\mathds{1}_A \mathds{1}_B = 0$  
+        (4) $\mathds{1}_A + \mathds{1}_B - \mathds{1}_A\mathds{1}_B=0$  
+
+    Next, we show that $\mathds{1}_A \mathds{1}_B = \mathds{1}_{A\cap B}$
+
+    Let $\omega \in A \cap B$. Then  
+        (1) $\mathds{1}_{A\cap B} = 1$  
+        (2) $\omega \in A, \omega \in B \implies \mathds{1}_A = 1,  \mathds{1}_B=1$  
+        (3) $\mathds{1}_A \mathds{1}_B = 1$  
+
+    Let $\omega \notin A \cap B$. Then  
+        (1) $\mathds{1}_{A\cap B} = 0$  
+        (2) Either $\omega \in A, \omega \notin B$ $\omega \notin A, \omega \in B$, or $\omega \notin A, \omega \notin B$. WLOG, suppose or $\omega \in A, \omega \notin B \implies \mathds{1}_A = 1,  \mathds{1}_B=0$  
+        (3) $\mathds{1}_A \mathds{1}_B = 0$  
+
+    Finally, we use these identities to show the proof.
+
+    $$
+    P(A\cup B) = E(\mathds{1}_{A\cup B}) = E(\mathds{1}_A + \mathds{1}_B - \mathds{1}_A \mathds{1}_B) = 
+    E(\mathds{1}_A) + E(\mathds{1}_B) - E(\mathds{1}_{A\cap B}) =
+    P(A) + P(B) - P(A\cap B) \qedsymbol
+    $$
+
+5.
+    (a) 
+        $$
+        \frac{d}{dt} H(t) = -\frac{d}{dt} \log(1-F(t)) =
+        \boxed{\frac{f(t)}{1-F(t)}}
+        $$

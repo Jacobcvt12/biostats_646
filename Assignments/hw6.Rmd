@@ -95,9 +95,24 @@ knitr::opts_chunk$set(message=FALSE)
         \boxed{\frac{f(t)}{1-F(t)}}
         $$
 
-    (b)
+    (b) By definition, $P(X>t)=1-F(t)$. Then we just need to show that 
+    $$\lim_{h \downarrow 0} \frac{P(X\leq t+h)}{h} = f(t)$$
+    Then 
+    $$P(X\leq t+h)/h = \frac{P(t\leq X\leq h | X > t)}{h}$$
+    The limit of this is the definition of a density function and so
+    $$\lim_{h \downarrow 0} \frac{P(X\leq t+h)}{h} = f(t)$$
 
     (c)
+    $$
+    \begin{aligned}
+    P(X>t+s|X>t) &= \frac{P(X>t+s, X>t)}{P(X>t)} \\
+    &= \frac{P(X>t+s)}{P(X>t)} \\
+    &= \frac{1-F(t+s)}{1-F(t)} \\
+    &= \exp(-(-\log(1-F(t))+\log(1-F(t)))) \\
+    &= -(H(t+s)-H(t)) \\
+    &= \int_t^{t+s}h(u) du
+    \end{aligned}
+    $$
 
 6. 
     (a)
@@ -124,3 +139,54 @@ knitr::opts_chunk$set(message=FALSE)
         geom_line(aes(colour=lambda, linetype=lambda)) +
         theme_classic()
     ```
+    (b)
+    $$
+    \begin{aligned}
+    M_X(t) &= E[e^{tx}] \\
+    &= \int_{-\infty}^{\infty} e^{tx} f(x) dx \\
+    &= \int_{-\infty}^{\infty} e^{tx} \frac{\lambda}{2}e^{-\lambda
+    |x|} dx \\
+    &= \frac{\lambda}{2} \int_{-\infty}^{0} e^{x(t+\lambda)} dx  + 
+    \frac{\lambda}{2} \int_{0}^{\infty} e^{x(t-\lambda)} \\
+    &= -\frac{\lambda^2}{(t+\lambda)(t-\lambda)}
+    \end{aligned}
+    $$
+
+    (c) 
+    $$
+    \frac{\partial}{\partial t} M_x(t) =
+    \frac{2t\lambda^2}{(t-\lambda)^2(t+\lambda)^2} \implies
+    \text{Mean}=0
+    $$
+    $$
+    \frac{\partial^2}{\partial t^2} M_x(t) =
+    \frac{2\lambda^2(3t^2+\lambda^2)}{(\lambda-t)^3(t+\lambda)^3} \implies
+    \text{Variance}=\frac{2}{\lambda^2}
+    $$
+    (d) For $z \leq 0$
+    $$
+    F_{Z=X-Y}=\int_0^{\infty} \int_{x-z}^{\infty} e^{-x}e^{-y}dy dx =
+    \frac{e^z}{2}
+    $$
+    For $z > 0$
+    $$
+    F_{Z=X-Y}=\int_z^{\infty} \int_{0}^{x-z} e^{-x}e^{-y}dy dx =
+    1-\frac{e^{-z}}{2}
+    $$
+    Then $f_Z=\frac{e^{-z}}{2}$ which is a Laplace$(\lambda=1)$
+    (e)
+    From before, we have that $E[X]=0$ and Var $X=\frac{2}{\lambda^2}$.
+    Then
+    $$
+    \begin{aligned}
+    \text{MGF}_{W_n}(t) &= E[\exp(\frac{t \lambda}{\sqrt{2n}} \bar{X})] \\
+    &= E[\exp(t\lambda/\sqrt{2n} \sum X_i)] \\
+    &= \Pi \text{MGF}_{X_i} (t \lambda/\sqrt{2n}) \\
+    &= \Big(\frac{-\lambda^2}{\frac{t^2\lambda^2}{2n}-\lambda^2}\Big)^n \\
+    &= \frac{1}{(1-\frac{t^2}{2n})^n}
+    \end{aligned}
+    $$
+    (f)
+    The limiting MGF is $\exp(\frac{-t^2}{2})$
+    (g)
+    This is the MGF of a normal distribution with mean 0 and variance 1.
